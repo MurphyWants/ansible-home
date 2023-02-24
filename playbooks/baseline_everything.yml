@@ -1,0 +1,43 @@
+---
+- name: Patch All Systems
+  hosts: all
+  gather_facts: True
+  tasks: 
+  - name: Update All Systems
+    ansible.builtin.package:
+      name: * 
+      state: latest
+
+- name: Hardening/Baseline RHEL Boxes
+  hosts: ansible_facts['distribution'] == "RedHat" or ansible_facts['distribution'] == "AlmaLinux" 
+  role: ansible-role-RHEL-baseline
+
+- name: Deploy Freshrss
+  hosts: freshrss
+  role: ansible-deploy-freshrss
+
+- name: Deploy Heimdall
+  hosts: heimdall
+  role: ansible-deploy-heimdall
+
+- name: Reboot all hosts
+  hosts: all
+  tasks:
+  # All VM should start when the host starts
+  - name: Shutdown all virtual hosts 
+    community.general.shutdown:
+    when: ansible_facts['virtualization_role'] == "guest"
+  
+  - name: Reboot all physical hosts
+    ansible.builtin.reboot:
+    when: ansible_facts['virtualization_role'] == "host"
+  
+  # Stolen from https://www.middlewareinventory.com/blog/ansible_wait_for_reboot_to_complete/
+  - name: Check all hosts came back
+    ansible.builtin.wait_for:
+      port: 22
+      host: '{{ (ansible_ssh_host|default(ansible_host))|default(inventory_hostname) }}'
+      search_regex: OpenSSH
+      delay: 10
+      timeout: 60
+    connection: local
