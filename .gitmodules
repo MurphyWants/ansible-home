@@ -1,0 +1,3 @@
+[submodule "roles/murphywants-ansible-role-component-docker"]
+	path = roles/murphywants-ansible-role-component-docker
+	url = git@github.com:MurphyWants/murphywants-ansible-role-component-docker.git
