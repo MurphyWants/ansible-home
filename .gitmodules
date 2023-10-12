@@ -1,3 +1,18 @@
 [submodule "roles/murphywants-ansible-role-component-docker"]
 	path = roles/murphywants-ansible-role-component-docker
 	url = git@github.com:MurphyWants/murphywants-ansible-role-component-docker.git
+[submodule "roles/murphywants-ansible-role-application-homeassistant"]
+	path = roles/murphywants-ansible-role-application-homeassistant
+	url = git@github.com:MurphyWants/murphywants-ansible-role-application-homeassistant.git
+[submodule "roles/murphywants-ansible-role-baseline-ubuntu"]
+	path = roles/murphywants-ansible-role-baseline-ubuntu
+	url = git@github.com:MurphyWants/murphywants-ansible-role-baseline-ubuntu.git
+[submodule "roles/murphywants-ansible-role-application-vaultwarden"]
+	path = roles/murphywants-ansible-role-application-vaultwarden
+	url = git@github.com:MurphyWants/murphywants-ansible-role-application-vaultwarden.git
+[submodule "roles/murphywants-ansible-role-application-pihole"]
+	path = roles/murphywants-ansible-role-application-pihole
+	url = git@github.com:MurphyWants/murphywants-ansible-role-application-pihole.git
+[submodule "roles/murphywants-ansible-role-application-Freshrss"]
+	path = roles/murphywants-ansible-role-application-Freshrss
+	url = git@github.com:MurphyWants/murphywants-ansible-role-application-Freshrss.git
