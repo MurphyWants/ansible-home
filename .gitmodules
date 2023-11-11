@@ -16,3 +16,6 @@
 [submodule "roles/murphywants-ansible-role-application-Freshrss"]
 	path = roles/murphywants-ansible-role-application-Freshrss
 	url = git@github.com:MurphyWants/murphywants-ansible-role-application-Freshrss.git
+[submodule "roles/murphywants-ansible-role-baseline-proxmox"]
+	path = roles/murphywants-ansible-role-baseline-proxmox
+	url = git@github.com:MurphyWants/murphywants-ansible-role-baseline-proxmox.git
