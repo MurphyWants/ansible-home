@@ -3,33 +3,42 @@
   become: yes
   tasks:
 
+# Run OS Baselines to Setup Systems
   - name: Baseline Ubuntu
     ansible.builtin.import_role:
-      name: "../ansible-roles/os-baseline/murphywants-ansible-role-baseline-ubuntu"
+      name: "murphywants-ansible-role-baseline-ubuntu"
     when:
       - ansible_distribution == 'Ubuntu'
 
+# Run OS Baselines to Setup Proxmox
+- hosts: os_proxmox
+  become: yes
+  tasks:
+    - name: Baseline proxmox
+      ansible.builtin.import_role:
+        name: "murphywants-ansible-role-baseline-proxmox"
 
-
+# Setup/Configure/Update Vaultwarden
 - hosts: app_vaultwarden
   become: yes
   tasks: 
     - name: Setup Vaultwarden
       ansible.builtin.import_role:
-        name: "../ansible-roles/server_applications/murphywants-ansible-role-application-vaultwarden"
+        name: "murphywants-ansible-role-application-vaultwarden"
 
-
+# Setup/Configure/Update Vaultwarden
 - hosts: app_freshrss
   become: yes
   tasks:
     - name: Setup Freshrss
       ansible.builtin.import_role:
-        name: "../ansible-roles/server_applications/murphywants-ansible-role-application-Freshrss"
+        name: "murphywants-ansible-role-application-Freshrss"
 
+# Setup/Configure/Update Home Assistant
 - hosts: app_home_assistant
   become: yes
   tasks:
     - name: Setup Home Assistant
       ansible.builtin.import_role:
-        name: ../ansible-roles/server_applications/murphywants-ansible-role-application-homeassistant
+        name: "murphywants-ansible-role-application-homeassistant"
 
