@@ -42,3 +42,9 @@
       ansible.builtin.import_role:
         name: "murphywants-ansible-role-application-homeassistant"
 
+- hosts: app_nextcloud
+  become: yes
+  tasks: 
+    - name: Setup nextcloud
+      ansible.builtin.import_role:
+        name: "murphywants-ansible-role-application-nextcloud"

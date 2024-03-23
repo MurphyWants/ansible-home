@@ -19,3 +19,9 @@
 [submodule "roles/murphywants-ansible-role-baseline-proxmox"]
 	path = roles/murphywants-ansible-role-baseline-proxmox
 	url = git@github.com:MurphyWants/murphywants-ansible-role-baseline-proxmox.git
+[submodule "roles/murphywants-ansible-role-application-nextcloud"]
+	path = roles/murphywants-ansible-role-application-nextcloud
+	url = git@github.com:MurphyWants/murphywants-ansible-role-application-nextcloud.git
+[submodule "roles/murphywants-ansible-role-component-dehydrated"]
+	path = roles/murphywants-ansible-role-component-dehydrated
+	url = https://github.com/MurphyWants/murphywants-ansible-role-component-dehydrated
