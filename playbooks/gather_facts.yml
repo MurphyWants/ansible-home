@@ -2,6 +2,12 @@
   gather_facts: yes
   become: yes
   tasks:
-  - name: print facts
+  - name: Get Service facts
+    ansible.builtin.service_facts:
+
+  - name: Get Package Facts
+    ansible.builtin.package_facts:
+
+  - name: Print All Facts
     ansible.builtin.debug:
       var: ansible_facts
