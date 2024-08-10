@@ -25,3 +25,6 @@
 [submodule "roles/murphywants-ansible-role-component-dehydrated"]
 	path = roles/murphywants-ansible-role-component-dehydrated
 	url = https://github.com/MurphyWants/murphywants-ansible-role-component-dehydrated
+[submodule "roles/murphywants-ansible-role-application-grocy"]
+	path = roles/murphywants-ansible-role-application-grocy
+	url = git@github.com:MurphyWants/murphywants-ansible-role-application-grocy.git
