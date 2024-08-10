@@ -48,3 +48,10 @@
     - name: Setup nextcloud
       ansible.builtin.import_role:
         name: "murphywants-ansible-role-application-nextcloud"
+
+- hosts: app_grocy
+  become: yes
+  tasks: 
+    - name: Setup grocy
+      ansible.builtin.import_role:
+        name: "murphywants-ansible-role-application-grocy"
