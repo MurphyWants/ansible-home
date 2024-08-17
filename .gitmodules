@@ -28,3 +28,6 @@
 [submodule "roles/murphywants-ansible-role-application-grocy"]
 	path = roles/murphywants-ansible-role-application-grocy
 	url = git@github.com:MurphyWants/murphywants-ansible-role-application-grocy.git
+[submodule "roles/murphywants-ansible-role-application-bookstack"]
+	path = roles/murphywants-ansible-role-application-bookstack
+	url = git@github.com:MurphyWants/murphywants-ansible-role-application-bookstack.git

@@ -55,3 +55,10 @@
     - name: Setup grocy
       ansible.builtin.import_role:
         name: "murphywants-ansible-role-application-grocy"
+
+- hosts: app_bookstack
+  become: yes
+  tasks: 
+    - name: Setup bookstack
+      ansible.builtin.import_role:
+        name: "murphywants-ansible-role-application-bookstack"
