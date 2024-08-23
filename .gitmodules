@@ -31,3 +31,6 @@
 [submodule "roles/murphywants-ansible-role-application-bookstack"]
 	path = roles/murphywants-ansible-role-application-bookstack
 	url = git@github.com:MurphyWants/murphywants-ansible-role-application-bookstack.git
+[submodule "roles/murphywants-ansible-role-application-forgejo"]
+	path = roles/murphywants-ansible-role-application-forgejo
+	url = git@github.com:MurphyWants/murphywants-ansible-role-application-forgejo.git

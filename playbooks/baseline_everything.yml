@@ -62,3 +62,10 @@
     - name: Setup bookstack
       ansible.builtin.import_role:
         name: "murphywants-ansible-role-application-bookstack"
+
+- hosts: app_forgejo
+  become: yes
+  tasks: 
+    - name: Setup forgejo
+      ansible.builtin.import_role:
+        name: "murphywants-ansible-role-application-forgejo"
