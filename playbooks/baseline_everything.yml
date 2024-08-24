@@ -69,3 +69,10 @@
     - name: Setup forgejo
       ansible.builtin.import_role:
         name: "murphywants-ansible-role-application-forgejo"
+
+- hosts: app_planka
+  become: yes
+  tasks: 
+    - name: Setup planka
+      ansible.builtin.import_role:
+        name: "murphywants-ansible-role-application-planka"

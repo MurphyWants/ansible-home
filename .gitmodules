@@ -34,3 +34,6 @@
 [submodule "roles/murphywants-ansible-role-application-forgejo"]
 	path = roles/murphywants-ansible-role-application-forgejo
 	url = git@github.com:MurphyWants/murphywants-ansible-role-application-forgejo.git
+[submodule "roles/murphywants-ansible-role-application-planka"]
+	path = roles/murphywants-ansible-role-application-planka
+	url = git@github.com:MurphyWants/murphywants-ansible-role-application-planka.git
