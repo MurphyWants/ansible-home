@@ -37,3 +37,9 @@
 [submodule "roles/murphywants-ansible-role-application-planka"]
 	path = roles/murphywants-ansible-role-application-planka
 	url = git@github.com:MurphyWants/murphywants-ansible-role-application-planka.git
+[submodule "roles/murphywants-ansible-role-application-mealie"]
+	path = roles/murphywants-ansible-role-application-mealie
+	url = https://github.com/MurphyWants/murphywants-ansible-role-application-mealie
+[submodule "roles/murphywants-ansible-role-application-homepage"]
+	path = roles/murphywants-ansible-role-application-homepage
+	url = git@github.com:MurphyWants/murphywants-ansible-role-application-homepage.git

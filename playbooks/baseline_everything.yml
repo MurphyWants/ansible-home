@@ -76,3 +76,18 @@
     - name: Setup planka
       ansible.builtin.import_role:
         name: "murphywants-ansible-role-application-planka"
+
+- hosts: app_homepage
+  become: yes
+  tasks: 
+    - name: Setup homepage
+      ansible.builtin.import_role:
+        name: "murphywants-ansible-role-application-homepage"
+
+- hosts: app_mealie
+  become: yes
+  tasks: 
+    - name: Setup mealie
+      ansible.builtin.import_role:
+        name: "murphywants-ansible-role-application-mealie"
+        
