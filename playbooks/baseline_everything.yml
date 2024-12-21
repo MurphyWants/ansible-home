@@ -18,6 +18,19 @@
       ansible.builtin.import_role:
         name: "murphywants-ansible-role-baseline-proxmox"
 
+# Update Everything Else
+- hosts: all
+  become: yes
+  tasks:
+    - name: Update Almalinux
+      ansible.builtin.dnf:
+        name: "*"
+        state: latest
+      when:
+        - ansible_distribution == 'AlmaLinux'
+      tags: 
+        - setup
+
 # Setup/Configure/Update Vaultwarden
 - hosts: app_vaultwarden
   become: yes
@@ -90,4 +103,12 @@
     - name: Setup mealie
       ansible.builtin.import_role:
         name: "murphywants-ansible-role-application-mealie"
-        
+
+- hosts: all
+  become: yes
+  tasks:
+    - name: Reboot
+      ansible.builtin.reboot:
+        reboot_timeout: 3600
+      tags: 
+        - setup
