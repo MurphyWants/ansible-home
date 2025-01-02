@@ -46,3 +46,6 @@
 [submodule "roles/murphywants-ansible-role-application-hoarderapp"]
 	path = roles/murphywants-ansible-role-application-hoarderapp
 	url = git@github.com:MurphyWants/murphywants-ansible-role-application-hoarderapp.git
+[submodule "roles/murphywants-ansible-role-application-localai"]
+	path = roles/murphywants-ansible-role-application-localai
+	url = git@github.com:MurphyWants/murphywants-ansible-role-application-localai.git
