@@ -104,6 +104,21 @@
       ansible.builtin.import_role:
         name: "murphywants-ansible-role-application-mealie"
 
+- hosts: app_hoaderapp
+  become: yes
+  tasks: 
+    - name: Setup hoarderapp
+      ansible.builtin.import_role:
+        name: "murphywants-ansible-role-application-hoarderapp"
+
+- hosts: app_localai
+  become: yes
+  tasks: 
+    - name: Setup localai
+      ansible.builtin.import_role:
+        name: "murphywants-ansible-role-application-localai"
+
+
 - hosts: all
   become: yes
   tasks:
