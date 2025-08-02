@@ -1,3 +1,4 @@
 inventories/*_inventory.ini
 *.log*
 dev_playbooks/*
+log_archive/*
