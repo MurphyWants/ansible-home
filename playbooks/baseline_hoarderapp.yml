@@ -1,0 +1,12 @@
+- hosts: app_hoaderapp
+  gather_facts: yes
+  become: yes
+  tasks:
+
+- hosts: app_hoaderapp
+  become: yes
+  tasks: 
+    - name: Setup kara keep
+      ansible.builtin.import_role:
+        name: "murphywants-ansible-role-application-hoarderapp"
+

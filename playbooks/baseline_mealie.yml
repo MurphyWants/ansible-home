@@ -1,0 +1,11 @@
+- hosts: app_mealie
+  gather_facts: yes
+  become: yes
+  tasks:
+
+- hosts: app_mealie
+  become: yes
+  tasks: 
+    - name: Setup mealie
+      ansible.builtin.import_role:
+        name: "murphywants-ansible-role-application-mealie"

@@ -1,0 +1,12 @@
+- hosts: app_forgejo
+  gather_facts: yes
+  become: yes
+  tasks:
+
+- hosts: app_forgejo
+  become: yes
+  tasks: 
+    - name: Setup forgejo
+      ansible.builtin.import_role:
+        name: "murphywants-ansible-role-application-forgejo"
+

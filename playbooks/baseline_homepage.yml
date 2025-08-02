@@ -1,0 +1,11 @@
+- hosts: app_homepage
+  gather_facts: yes
+  become: yes
+  tasks:
+
+- hosts: app_homepage
+  become: yes
+  tasks: 
+    - name: Setup homepage
+      ansible.builtin.import_role:
+        name: "murphywants-ansible-role-application-homepage"

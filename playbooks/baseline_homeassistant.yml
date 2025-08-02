@@ -1,0 +1,12 @@
+- hosts: app_home_assistant
+  gather_facts: yes
+  become: yes
+  tasks:
+
+- hosts: app_home_assistant
+  become: yes
+  tasks: 
+    - name: Setup homeassistant
+      ansible.builtin.import_role:
+        name: "murphywants-ansible-role-application-homeassistant"
+

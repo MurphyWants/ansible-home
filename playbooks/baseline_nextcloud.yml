@@ -1,0 +1,11 @@
+- hosts: app_nextcloud
+  gather_facts: yes
+  become: yes
+  tasks:
+
+- hosts: app_nextcloud
+  become: yes
+  tasks: 
+    - name: Setup nextcloud
+      ansible.builtin.import_role:
+        name: "murphywants-ansible-role-application-nextcloud"
